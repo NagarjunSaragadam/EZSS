@@ -3,7 +3,7 @@
     <name>EZSS</name>
     <description>Sandhya's Clinic</description>
     <author href="https://www.linkedin.com/in/nagarjun-saragadam-79539a25/" email="thenagarjun558@gmail.com">Saragadam Nagarjun</author>
-    <content src="main.html"/>
+    <content src="index.html"/>
      <preference name="permissions" value="none"/>
     <preference name="orientation" value="portrait"/>
     <preference name="target-device" value="universal"/>
