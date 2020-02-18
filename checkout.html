@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from ngetemplate.tech/mshop/mshop/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2020 08:11:18 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>speechie swallow clinic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="dist/css/pignose.calendar.min.css"/><!-- //font-awesome-icons -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+<script type="text/javascript" src="dist/js/pignose.calendar.full.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar-top">
+        <div class="side-nav-panel-left"><a href="#" data-activates="slide-out-left" class="side-nav-left"><i class="fa fa-bars"></i></a></div>
+        <div class="site-brand"><a href="index.html" class="das"><h1><span>Sandhya's </span>clinic</h1></a></div>
+        <div class="side-nav-panel-right"><a href="#" data-activates="slide-out-right" class="side-nav-right"><i class="fa fa-info-circle"></i></a></div>
+    </div>
+    <div class="side-nav-panel-left">
+        <ul id="slide-out-left" class="side-nav side-nav-panel">
+           <li><a href="index.html"><h1><span>Sandhya's</span>clinic</h1></a></li>
+            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>            
+            <li><a href="checkout.html"><i class="fa fa-credit-card"></i>Slot Booking</a></li>
+            <li><a href="blog.html"><i class="fa fa-bold"></i>Blog</a></li>            
+            <li><a href="Location.html"><i class="fa fa-map"></i>Location</a></li>
+            <li><a href="about-us.html"><i class="fa fa-user"></i>About Us</a></li>
+            <li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>            
+        </ul>
+	</div>    
+<script type="text/javascript">
+	function Calldatasubmit(){	 
+		var cookieValue = document.getElementById('content').innerHTML.replace('Your selected ','');		
+		var url="contact.html?date=''"+cookieValue+"''";
+		window.location=url;
+		return false;		
+	}
+		//<![CDATA[
+		$(function () {
+			$('#wrapper .version strong').text('v' + $.fn.pignoseCalendar.version);
+			// Schedule Calendar
+			$('.calendar').pignoseCalendar({            
+				scheduleOptions: {
+					colors: {
+						holiday: '#2fabb7',
+						seminar: '#5c6270',
+						meetup: '#ef8080'
+					}
+				},
+				schedules: [{
+					name: 'holiday',
+					date: '2020-01-01'
+				}, {
+					name: 'holiday',
+					date: '2017-09-16'
+				}, {
+					name: 'holiday',
+					date: '2017-10-01',
+				}, {
+					name: 'holiday',
+					date: '2017-10-05'
+				}, {
+					name: 'holiday',
+					date: '2017-10-18',
+				}, {
+					name: 'seminar',
+					date: '2017-11-14'
+				}, {
+					name: 'seminar',
+					date: '2017-12-01',
+				}, {
+					name: 'meetup',
+					date: '2018-01-16'
+				}, {
+					name: 'meetup',
+					date: '2018-02-01',
+				}, {
+					name: 'meetup',
+					date: '2018-02-18'
+				}, {
+					name: 'meetup',
+					date: '2018-03-04',
+				}, {
+					name: 'meetup',
+					date: '2018-04-01'
+				}, {
+					name: 'meetup',
+					date: '2018-04-19',
+				}],
+				select: function (date, context) {
+					var message = `<h3 id="content">Your selected ${(date[0] === null ? 'null' : date[0].format('YYYY-MM-DD'))}</h3><br /><div class="schedules-date"></div>`;
+					if(Date.parse(date[0])-Date.parse(new Date())>=-1){
+					var $target = context.calendar.parent().next().show().html(message);	
+					for (var idx in context.storage.schedules) {
+						var schedule = context.storage.schedules[idx];
+						if (typeof schedule !== 'object') {
+							continue;
+						}
+						$target.find('.schedules-date').append('<strong>Events for this date</strong><span class="ui label default">' + schedule.name + '</span>');	}					
+						$("#subdis").attr("disabled", false);
+						}
+						
+						else
+						{
+						$("#subdis").attr("disabled", true);
+						event.preventDefault();
+						return false; 
+						}
+				}
+			});
+		});    
+	</script>
+	<!-- Local -->
+	<div class="contact-us pages section-padding">
+		<div class="container">
+			<div class="pages-head">
+				<h2>Slot Allocation</h2>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<form action="#">
+											<div class="input-field">
+												<h5>Name*</h5>
+												<input type="text" class="validate" required>
+											</div>
+											<div class="input-field">
+												<h5>Email*</h5>
+												<input type="email" class="validate" required>
+											</div>											
+											<div class="input-field">
+												<h5>Address*</h5>
+												<input type="text" class="validate" required>
+											</div>
+											<div class="input-field">
+												<h5>Town/City*</h5>
+												<input type="text" class="validate" required>
+											</div>											
+											<div class="input-field">
+												<h5>Portalcode/ZIP*</h5>
+												<input type="number" class="validate" required>
+											</div>
+											<div class="input-field">
+												<h5>Phone*</h5>
+												<input type="number" class="validate" required>
+											</div>
+											<h5>Service*</h5>
+					 <select class="browser-default">
+					    <option>speech Therapy</option>
+						<option>Swallow Therapy</option>						
+					  </select>
+											<a href="#" class="btn button-default">Book my slot</a>
+										</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end Local -->
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="about-us-foot">
+                <h6><span>Sandhya's </span>clinic</h6>                
+            </div>
+            <div class="social-media"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-google"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>            
+            <div class="copyright"><span>© 2020 All Right Reserved<br/> Developed By S Nagarjun</span></div>
+        </div>
+    </div>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
